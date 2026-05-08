@@ -1,0 +1,4 @@
+320px   -> very small phones
+480px   -> phones
+768px   -> tablets / large phones
+1024px  -> small laptops

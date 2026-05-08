@@ -1,0 +1,58 @@
+.send-invoice-and-record-payment {
+    height: auto;
+    padding: 20px 20px;
+    /* border: 2px solid var(--sub-container-border); */
+    margin: 10px 10px;
+    /* border-radius: var(--sub-elem-border-radius); */
+}
+
+.invoice-record {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.inline-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 18px;
+    font-size: 20px;
+    border-radius: var(--sub-elem-border-radius);
+    border: none;
+}
+
+.invoice-background {
+    color: var(--primary-blue);
+    font-weight: bold;
+    border: 2px solid var(--primary-blue);
+    background-color: white;
+}
+
+.invoice-background svg {
+    fill: var(--primary-blue);
+    padding: 2px;
+}
+
+.record-background {
+    color: white;
+    background-color: var(--primary-blue);
+}
+
+.record-background:hover {
+    background-color: var(--button-hover);
+}
+
+@media screen and (max-width: 768px){
+    .invoice-record{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .inline-button{
+        font-size: 16px;
+        width: 100;
+        justify-content: center;
+        padding: 12px 16px;
+    }
+}

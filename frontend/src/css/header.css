@@ -1,0 +1,272 @@
+:root {
+    --primary-blue: #1677ff;
+    --font-family: "Poppins", sans-serif;
+
+    /* sub-elems */
+    --card-bg: rgb(174, 199, 239);
+    --sub-elem-color: #095a13;
+    --sub-elem-border-radius: 10px;
+
+    --sub-container-border: grey;
+
+    --sub-container-svg-background-color: #70a8f8;
+
+    --secondary-color: rgba(46, 46, 46, 0.603);
+
+    --button-hover: #70a8f8;
+
+}
+
+main {
+    padding-left: 40px;
+    padding-right: 40px;
+    /* min-height: 100vh; */
+}
+
+.invoice-number-head {
+    padding: 10px 10px;
+    font-family: var(--font-family);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+    min-height: 100vh;
+    padding-right: 10px;
+}
+
+.sub-elem {
+    margin: 2px 20px;
+    color: #1677FF;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: var(--font-family);
+}
+
+.payment-status {
+    background-color: var(--card-bg);
+    color: var(--sub-elem-color);
+    height: 25px;
+    width: 60px;
+    text-align: center;
+    border-radius: var(--sub-elem-border-radius);
+    padding: 0px 4px;
+    font-family: var(--font-family);
+}
+
+.download-pdf {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: var(--sub-elem-border-radius);
+}
+
+.download-pdf:hover {
+    background-color: #70a8f8;
+    /* border: 2px solid black; */
+}
+
+button svg {
+    fill: white;
+    padding: 2px;
+    stroke: blue;
+}
+
+.invoice-details {
+    min-height: 200px;
+    max-height: 400px;
+    height: auto;
+    width: 100%;
+    min-width: 200px;
+    border: 2px solid var(--sub-container-border);
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: var(--sub-elem-border-radius);
+    display: flex;
+    overflow-x: auto;
+}
+
+.sub-container {
+    flex: 1;
+}
+
+.border-boxes {
+    border-right: 2px solid var(--primary-blue);
+}
+
+.box-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px;
+    margin: 20px 20px;
+    align-items: flex-start;
+}
+
+.calender-svg,
+.shopping-mode-svg,
+.payment-svg,
+.customer-svg,
+.credit-card-svg {
+    padding: 10px;
+    background-color: var(--sub-container-svg-background-color);
+    fill: #1677FF;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    flex-shrink: 0;
+}
+
+.issue-date h3,
+.issue-date h2 {
+    font-family: var(--font-family);
+}
+
+.issue-date h3 {
+    color: rgba(46, 46, 46, 0.603);
+}
+
+.due-date h3,
+h2 {
+    font-family: var(--font-family);
+}
+
+.due-date h3 {
+    color: rgba(46, 46, 46, 0.603);
+}
+
+.box-1-elem-1 {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* box-2 */
+/* .shopping-mode-svg {
+    padding: 10px 10px;
+    background-color: var(--sub-container-svg-background-color);
+    fill: #1677FF;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+} */
+
+.box-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px;
+    margin: 20px 20px;
+    align-items: flex-start;
+}
+
+.invoice-number h3,
+h2 {
+    font-family: var(--font-family);
+}
+
+.invoice-number h3 {
+    color: rgba(46, 46, 46, 0.603);
+}
+
+.box-2-elem-2 {
+    display: flex;
+    gap: 20px;
+}
+
+/* payment due */
+/* .payment-svg {
+    padding: 10px 10px;
+    background-color: var(--sub-container-svg-background-color);
+    fill: #1677FF;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+} */
+
+.payment-due h3,
+h2 {
+    font-family: var(--font-family);
+}
+
+.payment-due h3 {
+    color: rgba(46, 46, 46, 0.603);
+}
+
+/* box-3 */
+/* .customer-svg {
+    padding: 10px 10px;
+    background-color: var(--sub-container-svg-background-color);
+    fill: #1677FF;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+} */
+
+.box-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px;
+    margin: 20px 20px;
+    align-items: flex-start;
+}
+
+.customer-details h3,
+h2 {
+    font-family: var(--font-family);
+}
+
+.customer-details h3 {
+    color: rgba(46, 46, 46, 0.603);
+}
+
+.box-3-elem-3 {
+    display: flex;
+    gap: 20px;
+}
+
+/* status-details */
+/* .credit-card-svg {
+    padding: 10px 10px;
+    background-color: var(--sub-container-svg-background-color);
+    fill: #1677FF;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+} */
+
+.status-details h3,
+h2 {
+    font-family: var(--font-family);
+}
+
+.status-details h3 {
+    color: rgba(46, 46, 46, 0.603);
+}
+
+.status-background-color {
+    background-color: rgb(90, 233, 90);
+    padding: 4px 8px;
+    border-radius: var(--sub-elem-border-radius);
+    color: var(--sub-elem-color);
+    font-size: 20px;
+}
+
+@media screen and (max-width: 375px) {
+    .invoice-number-head {
+        font-size: 10px;
+    }
+
+    .payment-status {
+        padding: 0px 10px;
+    }
+}

@@ -1,0 +1,30 @@
+.notes-section{
+    height: auto;
+    margin: 10px 10px;
+    padding: 20px 20px;
+    border: 2px solid var(--sub-container-border);
+    border-radius: var(--sub-elem-border-radius);
+    font-family: var(--font-family);
+}
+.notes-content{
+    display: flex;
+    justify-content: space-between;
+}
+.notes-content h1{
+    color: var(--primary-blue);
+}
+.note-svg{
+    background-color: var(--primary-blue);
+    border: none;
+    border-radius: var(--sub-elem-border-radius);
+    padding: 10px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-size: 20px;
+}
+
+.note-svg:hover{
+    background-color: var(--button-hover);
+}
