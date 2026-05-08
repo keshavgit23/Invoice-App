@@ -1,0 +1,12 @@
+let inCount = localStorage.getItem("inCount") || 1
+export function invoiceNumber() {
+    // let ran_invoice = "INV" + "2026" + Math.floor(Math.random()*1000)
+    // console.log( Math.floor(Math.random()*1000))
+    // console.log(ran_invoice)
+    const invoice = `INV-2026-${String(inCount).padStart(3,"0")}`
+
+    inCount++;
+
+    localStorage.setItem("inCount",inCount)
+    return invoice
+}
