@@ -39,8 +39,6 @@
     width: max-content;
     font-family: var(--font-family);
     width: 100%;
-
-
 }
 
 th {
@@ -71,4 +69,21 @@ th {
 
 .invoice-table {
     overflow-x: auto;
+}
+
+.add-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-item-btn {
+    background-color: var(--primary-blue);
+    border: none;
+    border-radius: var(--sub-elem-border-radius);
+    padding: 10px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-size: 20px;
 }
