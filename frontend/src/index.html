@@ -140,19 +140,19 @@
                         Edit
                     </button>
                 </div>
-                <h3>Achme Corporation</h3>
-                <h4>123 Bussiness Street Suite 500</h4>
-                <h4>New York, NY 10001</h4>
-                <h4>United States</h4>
-                <h5>support@acmecorp.com</h5>
-                <h5>(212) 555-0198</h5>
+                <h3 class="name">Achme Corporation</h3>
+                <h4 class="address">123 Bussiness Street Suite 500</h4>
+                <h4 class="city">New York, NY 10001</h4>
+                <h4 class="country">United States</h4>
+                <h5 class="email">support@acmecorp.com</h5>
+                <h5 class="phone">(212) 555-0198</h5>
             </section>
         </header>
         <section class="invoice-items">
             <div class="invoice-table">
                 <div class="add-item">
                     <h1>Invoice Items</h1>
-                    <button id="addItem" class="add-item-btn">Add Item</button>
+                    <button id="addItemBtn" class="add-item-btn">Add Item</button>
                 </div>
                 <table>
                     <thead>
@@ -245,7 +245,35 @@
             </div>
         </section>
     </main>
+    <div id="modal" class="hidden">
+        <div class="modal-box">
+            <div class="backItem">
+                <button class="back-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#1f1f1f">
+                        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                    </svg>
+                </button>
+                <h1>Add Item</h1>
+            </div>
+            <form class="item-form">
+                <label for="itemName" class="inputLabel">Item Name</label>
+                <input type="text" class="inputBox" id="itemName" placeholder="Enter name">
 
+                <label for="itemDescription" class="inputLabel">Item Description</label>
+                <textarea id="itemDescription" rows="4" cols="50" placeholder="Enter description..."
+                    class="inputBox"></textarea>
+
+                <label for="itemQty" class="inputLabel">Item Quantity</label>
+                <input type="number" id="itemQty" placeholder="Enter quantity" class="inputBox">
+
+                <label for="unitPrice" class="inputLabel">Unit Price</label>
+                <input type="number" id="unitPrice" placeholder="Enter unit price" class="inputBox">
+
+                <button id="addItem">Add Item</button>
+            </form>
+        </div>
+    </div>
     <script type="module" src="main.js"></script>
 </body>
 
