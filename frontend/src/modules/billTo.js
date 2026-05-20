@@ -6,9 +6,6 @@ let customerCountry = document.querySelector(".country")
 let customerEmail = document.querySelector(".email")
 let customerPhone = document.querySelector(".phone")
 
-
-
-
 export function billTo() {
     customerName.textContent = invoiceData.customer.name
     customerAddress.textContent = invoiceData.customer.address[0]

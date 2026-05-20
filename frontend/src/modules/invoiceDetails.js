@@ -4,7 +4,7 @@ let issueDate = document.querySelector(".issue-date").children[1]
 let dueDate = document.querySelector(".due-date").children[1]
 let inNumber = document.querySelector(".invoice-number").children[1]
 let paymentDue = document.querySelector(".payment-due").children[1]
-console.log(paymentDue)
+// console.log(paymentDue)
 let paymentAmount = invoiceData.payment.amount_paid
 let customerName = document.querySelector(".customer-details").children[1]
 let statusDetails = document.querySelector(".status-details").children[1]

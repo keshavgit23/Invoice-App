@@ -88,11 +88,11 @@ th {
     font-size: 20px;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-#modal{
+#modal {
     position: fixed;
     inset: 0;
     background: var(--sub-container-svg-background-color);
@@ -102,7 +102,7 @@ th {
     align-items: center;
 }
 
-.modal-box{
+.modal-box {
     width: 500px;
     min-height: 300px;
 
@@ -115,31 +115,32 @@ th {
     align-items: center;
 }
 
-.item-form{
+.item-form {
     display: inline-flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.inputLabel{
+.inputLabel {
     font-family: "Poppins", sans-serif;
     font-size: 20px;
 }
 
 
-.inputBox{
+.inputBox {
     padding: 6px;
     border-radius: var(--sub-elem-border-radius);
     border: none;
     border: 2px solid var(--sub-container-border);
 }
-.inputBox:focus{
+
+.inputBox:focus {
     border-color: var(--primary-blue);
     outline: none;
     box-shadow: 0 0 10px rgba(25, 0, 255, 0.602);
 }
 
-#addItem{
+#addItemToRow {
     padding: 6px;
     border-radius: 20px;
     font-family: var(--font-family);
@@ -147,14 +148,24 @@ th {
     background-color: var(--primary-blue);
     color: white;
 }
-#addItem:hover{
+
+#addItem:hover {
     background-color: var(--sub-container-svg-background-color);
 }
 
-.backItem{
+.backItem {
     display: inline-flex;
     justify-content: space-between;
 }
-.back-arrow svg{
+
+.back-arrow svg {
     fill: var(--primary-blue);
+}
+
+#invoice-table-state {
+    display: none;
+}
+
+#empty-state {
+    display: block;
 }

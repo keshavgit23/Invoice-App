@@ -154,7 +154,7 @@
                     <h1>Invoice Items</h1>
                     <button id="addItemBtn" class="add-item-btn">Add Item</button>
                 </div>
-                <table>
+                <table id="invoice-table-state">
                     <thead>
                         <tr class="head-row">
                             <th>Item</th>
@@ -164,48 +164,28 @@
                             <th>Amount</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="bottom-border">
-                            <td>Web Design</td>
-                            <td>Custom Website Design</td>
-                            <td>1</td>
-                            <td>$1,500.00</td>
-                            <td>$1,500.00</td>
-                        </tr>
-                        <tr class="bottom-border">
-                            <td>Development</td>
-                            <td>Frontend Development</td>
-                            <td>1</td>
-                            <td>$2,500.00</td>
-                            <td>$2,500.00</td>
-                        </tr>
-                        <tr class="bottom-border">
-                            <td>Hosting</td>
-                            <td>1 Year Hosting</td>
-                            <td>1</td>
-                            <td>$120.00</td>
-                            <td>$120.00</td>
-                        </tr>
+                    <p id="empty-state">No items added</p>
+                    <tbody class="tbody">
                         <tr>
                             <td></td>
                             <td></td>
                             <td>Subtotal</td>
                             <td></td>
-                            <td>$4120.00</td>
+                            <td class="sub-total">0</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
                             <td>Tax(8%)</td>
                             <td></td>
-                            <td>$329.60</td>
+                            <td class="tax_row">0</td>
                         </tr>
                         <tr class="total-row">
                             <td></td>
                             <td></td>
                             <td class="total">Total</td>
                             <td></td>
-                            <td class="total-amount-value">$4,449.60</td>
+                            <td class="total-amount-value">0</td>
                         </tr>
                     </tbody>
                 </table>
@@ -248,7 +228,7 @@
     <div id="modal" class="hidden">
         <div class="modal-box">
             <div class="backItem">
-                <button class="back-arrow">
+                <button id="closeItemBtn" class="back-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#1f1f1f">
                         <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
@@ -258,19 +238,19 @@
             </div>
             <form class="item-form">
                 <label for="itemName" class="inputLabel">Item Name</label>
-                <input type="text" class="inputBox" id="itemName" placeholder="Enter name">
+                <input type="text" class="inputBox itemName" id="itemName" placeholder="Enter name" required>
 
                 <label for="itemDescription" class="inputLabel">Item Description</label>
                 <textarea id="itemDescription" rows="4" cols="50" placeholder="Enter description..."
-                    class="inputBox"></textarea>
+                    class="inputBox itemDesc" required></textarea>
 
                 <label for="itemQty" class="inputLabel">Item Quantity</label>
-                <input type="number" id="itemQty" placeholder="Enter quantity" class="inputBox">
+                <input type="number" id="itemQty" placeholder="Enter quantity" class="inputBox itemQty" required>
 
                 <label for="unitPrice" class="inputLabel">Unit Price</label>
-                <input type="number" id="unitPrice" placeholder="Enter unit price" class="inputBox">
+                <input type="number" id="unitPrice" placeholder="Enter unit price" class="inputBox unitPrice" required>
 
-                <button id="addItem">Add Item</button>
+                <button id="addItemToRow">Add Item</button>
             </form>
         </div>
     </div>
