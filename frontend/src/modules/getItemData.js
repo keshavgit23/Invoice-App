@@ -9,7 +9,7 @@ const addItem = document.getElementById("addItemToRow")
 function getItemName() {
     try {
         let item_name = document.querySelector(".itemName").value
-        if (item_name === "") {
+        if (item_name == "") {
             throw Error("Item Can't be empty!")
         } else if (!isNaN(Number(item_name))) {
             throw Error("Item name must be a string")
@@ -39,7 +39,7 @@ function getItemQty() {
     try {
         let item_qty = document.querySelector(".itemQty").value
         // console.log(item_qty)
-        if (item_qty === "") {
+        if (!item_qty) {
             throw Error("Item Quantity can't be empty!")
         } else if (item_qty <= 0) {
             throw Error("Item Quantity can't be zero or negative")
@@ -55,7 +55,7 @@ function getUnitPrice() {
     try {
         let unit_price = document.querySelector(".unitPrice").value
         // console.log(item_qty)
-        if (unitPrice === "") {
+        if (!unit_price) {
             throw Error("Unit price can't be empty!")
         } else if (unit_price <= 0) {
             throw Error("Unit Price can't be zero or negative")

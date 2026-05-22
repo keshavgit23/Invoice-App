@@ -29,8 +29,6 @@
 .invoice-table td {
     padding: 15px;
     white-space: nowrap;
-    /* color: var(--secondary-color) */
-    /* text-align: left; */
 }
 
 .invoice-items table {
@@ -86,6 +84,7 @@ th {
     gap: 6px;
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .hidden {
@@ -168,4 +167,20 @@ th {
 
 #empty-state {
     display: block;
+}
+
+.three-dot-svg {
+    background-color: var(--primary-blue);
+    border: none;
+    border-radius: var(--sub-elem-border-radius);
+    padding: 4px 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.three-dot-row{
+    width: 30px;
 }

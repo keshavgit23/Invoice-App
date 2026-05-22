@@ -1,4 +1,4 @@
-import { invoiceData } from "./invoicedata.js"
+import { invoiceData } from "./invoiceData.js"
 let customerName = document.querySelector(".name")
 let customerAddress = document.querySelector(".address")
 let customerCity = document.querySelector(".city")
@@ -11,5 +11,6 @@ export function billTo() {
     customerAddress.textContent = invoiceData.customer.address[0]
     customerCity.textContent = invoiceData.customer.address[1]
     customerCountry.textContent = invoiceData.customer.address[2]
+    customerEmail.textContent = invoiceData.customer.email
     customerPhone.textContent = invoiceData.customer.phone
 }
