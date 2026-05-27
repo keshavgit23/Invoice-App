@@ -3,6 +3,9 @@ import { lineTotal, subTotal } from "../utils/calculations.js"
 import { toggleState } from "./toggleTableState.js"
 import { taxCalculation } from "../utils/calculations.js"
 import { totalAmount } from "../utils/calculations.js"
+import { API_BASE_URL } from "../config.js"
+import { getInvoiceData, setInvoiceData } from "./invoiceData.js"
+
 const addItem = document.getElementById("addItemToRow")
 
 
@@ -77,15 +80,18 @@ export function getItemData() {
 }
 
 export function callAppendRow() {
+    let items = []
     addItem.addEventListener("click", (e) => {
         e.preventDefault()
-        let items = []
         try {
             let item = getItemData()
             if (!item.name || !item.description || !item.quantity || !item.unit_price === "") {
                 throw Error("Enter all fields!")
             } else {
                 items.push(item)
+                console.log("Org Items", items)
+                console.log("type of org items", typeof items[0])
+                console.log(items[0])
                 let line_total = lineTotal(item.quantity, item.unit_price)
                 console.log(line_total)
 
@@ -109,6 +115,9 @@ export function callAppendRow() {
 
                 let toggle_table_state = toggleState(items)
                 console.log("Table state", toggle_table_state)
+
+                let sendData = setInvoiceData(items)
+                console.log("Send Data", getInvoiceData())
             }
         } catch (err) {
             console.log("Item Form Error: ", err)

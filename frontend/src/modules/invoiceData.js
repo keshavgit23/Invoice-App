@@ -1,7 +1,52 @@
 import { invoiceNumber } from "./invoiceNumber.js"
 let inNumber = invoiceNumber()
 
-export const invoiceData = {
+// let saveItemArray = []
+// export function getItems(items) {
+//     saveItemArray.push(items)
+//     console.log('How many elems in saveItemArray: ', saveItemArray);
+
+//     console.log("TYpe of Get Items", typeof (saveItemArray))
+
+//     console.log("Get Items", saveItemArray)
+//     // console.log(JSON.stringify(saveItemArray, null, 2))
+//     console.log("Items len in getItems", saveItemArray.length)
+//     // console.log("Name", saveItemArray[0][0].name)
+//     // console.log("Description", saveItemArray[1][0].description)
+//     // console.log("quantity", saveItemArray.quantity)
+
+//     let flatItems = saveItemArray.flat(Infinity)
+//     console.log("After flat", saveItemArray)
+//     console.log("After infinity flat")
+//     // console.log(JSON.stringify(flatItems, null, 2))
+//     // // console.log(flatItems[0].name)
+//     // // console.log(flatItems[0].description)
+
+//     return flatItems
+// }
+
+export function setInvoiceData(items) {
+    console.log("Items pass:",items)
+    try {
+        if (!items) {
+            throw new Error("Data is empty!")
+        } else {
+            invoiceData.items = items
+            console.log("Items set", invoiceData.items = items)
+        }
+    } catch (err) {
+        console.log("Error: ", err.message)
+    }
+}
+
+export function getInvoiceData() {
+    console.log("GetInvoiceData: ", invoiceData)
+    console.log(JSON.stringify(invoiceData,null,4))
+    return invoiceData
+}
+//  console.log("passed data", data)
+//             console.log(JSON.stringify(data, null, 2))
+const invoiceData = {
     invoice_number: `${inNumber}`,
     dates: {
         issue_date: "20 March 2026",
@@ -19,12 +64,9 @@ export const invoiceData = {
         method: "UPI",
         amount_paid: "2000"
     },
-    items: {
-        item:["Web Design", "Hosting"],
-        description: ["Custom Website Design","1 Year Hosting"],
-        quantity: [1,1],
-        unit_price:[2000, 120],
-        amount:[2000,120]
-    },
+    items: []
+    ,
     notes: ""
 }
+console.log("Invoice Data:", invoiceData)
+console.log("first item name: ", getInvoiceData().name)

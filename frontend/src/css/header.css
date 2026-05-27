@@ -69,6 +69,28 @@ header {
     border-radius: var(--sub-elem-border-radius);
 }
 
+.action-btn {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.save-invoice {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: var(--sub-elem-border-radius);
+}
+
+.save-invoice:hover {
+    background-color: #70a8f8;
+
+}
+
 .download-pdf:hover {
     background-color: #70a8f8;
     /* border: 2px solid black; */
