@@ -1,5 +1,5 @@
 import express from 'express'
-
+import {createInvoice} from '../controllers/createInvoice.js'
 const router = express.Router()
 
 router.get('/',(req,res)=>{
@@ -8,11 +8,6 @@ router.get('/',(req,res)=>{
     })
 })
 
-router.post('/',(req,res)=>{
-    res.status(200).json({
-        message: "invoice data stored successfully",
-        body: req.body
-    })
-})
+router.post('/',createInvoice)
 
 export default router

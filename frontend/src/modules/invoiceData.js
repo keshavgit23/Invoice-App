@@ -26,7 +26,7 @@ let inNumber = invoiceNumber()
 // }
 
 export function setInvoiceData(items) {
-    console.log("Items pass:",items)
+    console.log("Items pass:", items)
     try {
         if (!items) {
             throw new Error("Data is empty!")
@@ -41,7 +41,7 @@ export function setInvoiceData(items) {
 
 export function getInvoiceData() {
     console.log("GetInvoiceData: ", invoiceData)
-    console.log(JSON.stringify(invoiceData,null,4))
+    console.log(JSON.stringify(invoiceData, null, 4))
     return invoiceData
 }
 //  console.log("passed data", data)
@@ -56,8 +56,12 @@ const invoiceData = {
         name: "Vishal Corporation",
         email: "suport@acmecorp.com",
         phone: "+91 9867368576",
-        address: [
-            "123 Bussiness Street xyz 500", "New York NY 10021", "United America"]
+        address: {
+            street: "123 Bussiness street xyz 500",
+            city: "New York",
+            pincode: 10021,
+            country: "United States"
+        }
     },
     payment: {
         status: "Pending",

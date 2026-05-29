@@ -10,3 +10,7 @@ let array_2 = [2,4,[5,3,6],7]
 ;let flat = array_2.flat(Infinity)
 console.log('Flatten',flat);
 
+let a = "DiffieHellmanGroup" 
+let b = 232
+
+console.log(`${a}`,`${b}`)

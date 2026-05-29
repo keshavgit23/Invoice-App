@@ -8,11 +8,12 @@
         "name": "Vishal Corporation",
         "email": "suport@acmecorp.com",
         "phone": "+91 9867368576",
-        "address": [
-            "123 Bussiness Street xyz 500",
-            "New York NY 10021",
-            "United America"
-        ]
+        "address": {
+            "street":"123 Bussiness street xyz 500",
+            "city": "New York",
+            "pincode": 10021,
+            "country":United States"
+        }
     },
     "payment": {
         "status": "Pending",
@@ -39,5 +40,6 @@
             "unit_price": "500"
         }
     ],
-    "notes": ""
+    "notes": "",
+    tax: 18
 }
